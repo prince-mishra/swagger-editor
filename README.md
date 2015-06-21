@@ -19,6 +19,18 @@ git clone https://github.com/swagger-api/swagger-editor.git
 cd swagger-editor
 npm start
 ```
+To run on a Ubuntu 14.04+ box,
+
+```shell
+sudo -s
+apt-get update && apt-get install -y git npm nodejs
+ln -s /usr/bin/nodejs /usr/local/bin/node
+npm install
+npm install -g bower grunt-cli
+bower --allow-root install
+grunt --force build
+grunt connect:dist
+```
 
 #### Documentations
 * [Why "Try this operation" is not working?](docs/cors.md)
